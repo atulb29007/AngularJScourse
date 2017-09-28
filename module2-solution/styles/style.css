@@ -1,15 +1,61 @@
+body{
+  background-color:#ebebeb;
+  font-family: 'Raleway',sans-serif;
+  letter-spacing:1px;
+}
+h1{
+  width:100%;
+  margin:0;
+  text-align:center;
+  padding:40px 0;
+  margin-top:20px;
+}
+.row{
+  max-width:800px;
+  margin:0 auto;
+}
 .emptyMessage {
-  font-weight: bold;
   color: red;
+  font-size:1.2em;
+  margin:0;
+  padding:10px 20px;
+  border-bottom:1px solid #ebebeb;
+}
+.shops{
+  width:360px;
+  padding:0;
+  margin:10px auto;
+  background-color:white;
+  border:1px solid green;
+}
+.shops h2{
+  margin:0;
+  padding:20px;
+  border-bottom:1px solid #ebebeb;
+  font-size:1.5em;
+  color:green;
+}
+.shops ul{
+  width:100%;
+  margin:0;
+  padding:0;
+}
+.shops ul li{
+  margin:0;
+  padding:10px 20px;
+  list-style-type:none;
   font-size: 1.2em;
+  display:flex;
+  justify-content:space-between;
+  vertical-align:middle;
+  border-bottom:1px solid #ebebeb;
 }
-li {
-  margin-bottom: 7px;
-  font-size: 1.2em;
+.shops ul li>button {
+  border-radius:0;
+  background-color:#ebebeb;
 }
-li > button {
-  margin-left: 6px;
-}
-button > span {
-  color: green;
+button>span {
+  color:green;
+  margin-right:5px;
+  font-size:0.8em;
 }
