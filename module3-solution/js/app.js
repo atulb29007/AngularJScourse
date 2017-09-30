@@ -2,8 +2,8 @@
 "use strict";
 
 angular.module('menuSearch',[])
-.controller('menuSearchController',menuSearchController)
-.service('menuService',menuService)
+.controller('NarrowItDownController',NarrowItDownController)
+.service('menuSearchService',menuSearchService)
 .directive('foundItems',FoundItems)
 .constant('appBase',"https://davids-restaurant.herokuapp.com");
 
@@ -26,8 +26,8 @@ function foundItemsDirectiveController(){
   var menu = this;
 };
 
-menuSearchController.$inject = ['menuService'];
-function menuSearchController (menuService){
+NarrowItDownController.$inject = ['menuSearchService'];
+function NarrowItDownController (menuSearchService){
   var menu = this;
   menu.notFound = false;
   menu.showLoader = false;
@@ -37,7 +37,7 @@ function menuSearchController (menuService){
       menu.notFound = false;
       menu.showLoader = true;
 
-      var promise = menuService.getMenuItems();
+      var promise = menuSearchService.getMenuItems();
 
       promise.then(function(response){
         menu.found = [];
@@ -60,7 +60,7 @@ function menuSearchController (menuService){
         menu.showLoader = false;
       })
       .catch(function(error){
-        console.log("Error Handling the Data from asynchronous Request of menuService.getMenuItems()");
+        console.log("Error Handling the Data from asynchronous Request of menuSearchService.getMenuItems()");
       });
     }
     else{
@@ -74,8 +74,8 @@ function menuSearchController (menuService){
   };
 };
 
-menuService.$inject = ['$http','appBase'];
-function menuService ($http,appBase){
+menuSearchService.$inject = ['$http','appBase'];
+function menuSearchService ($http,appBase){
   var service = this;
 
   service.getMenuItems = function(){
