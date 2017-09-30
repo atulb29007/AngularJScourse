@@ -30,10 +30,13 @@ menuSearchController.$inject = ['menuService'];
 function menuSearchController (menuService){
   var menu = this;
   menu.notFound = false;
+  menu.showLoader = false;
 
   menu.goSearch = function(){
     if(menu.searchTerm){
       menu.notFound = false;
+      menu.showLoader = true;
+
       var promise = menuService.getMenuItems();
 
       promise.then(function(response){
@@ -54,6 +57,7 @@ function menuSearchController (menuService){
         if(!menu.found.length){
           menu.notFound = true;
         }
+        menu.showLoader = false;
       })
       .catch(function(error){
         console.log("Error Handling the Data from asynchronous Request of menuService.getMenuItems()");
