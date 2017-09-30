@@ -1,0 +1,7 @@
+<h5 ng-if="menu.notFound">Nothing Found!</h5>
+<li ng-repeat="item in menu.foundItem">
+  <p class='f'>{{item.short_name}}</p>
+  <p class='s'>{{item.name}}</p>
+  <p class='t'>{{item.description}}</p>
+  <p class='fo'><button ng-click="menu.onRemove({ind : $index});" class="btn btn-danger">Don't want this one!</button></p>
+</li>
