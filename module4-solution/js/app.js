@@ -16,15 +16,18 @@ function RoutesConfig($stateProvider,$urlRouterProvider){
   $stateProvider
     .state('home',{
       url : '/',
-      templateUrl : 'templates/template.home.html'
+      templateUrl : 'src/template.home.html',
+	  controller : 'homeController as home'
     })
     .state('category',{
       url :'/categories',
-      templateUrl : 'templates/template.categories.html'
+      templateUrl : 'src/template.categories.html',
+	  controller : 'categoryController as category'
     })
     .state('items',{
       url : '/items/{categoryID}',
-      templateUrl : 'templates/template.categoryItems.html',
+      templateUrl : 'src/template.categoryItems.html',
+	  controller : 'categoryItemsController as items'
     });
 };
 
