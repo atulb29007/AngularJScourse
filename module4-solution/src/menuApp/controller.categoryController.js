@@ -4,8 +4,11 @@
 angular.module('menuApp')
 .controller('categoryController',categoryController);
 
-function categoryController (){
+categoryController.$inject = ['categoriesData'];
+function categoryController (categoriesData){
   var category = this;
+
+  category.categories = categoriesData.data;
 }
 
 })();

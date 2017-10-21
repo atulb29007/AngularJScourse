@@ -6,23 +6,36 @@ angular.module('menuApp')
 
 RoutesConfig.$inject = ['$stateProvider','$urlRouterProvider'];
 function RoutesConfig($stateProvider,$urlRouterProvider){
-  $urlRouterProvider.otherwise('/');
+  // $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('home',{
       url : '/',
-      templateUrl : 'src/menuApp/template.home.html',
-	  controller : 'homeController as home'
+      templateUrl : 'src/menuApp/template.view.home.html',
+	    controller : 'homeController as home'
     })
     .state('category',{
       url :'/categories',
-      templateUrl : 'src/menuApp/template.categories.html',
-	  controller : 'categoryController as category'
+      templateUrl : 'src/menuApp/template.view.categories.html',
+	    controller : 'categoryController as category',
+      resolve : {
+        categoriesData : ['menuDataService',function(menuDataService){
+          return menuDataService.getAllCategories();
+        }]
+      }
     })
     .state('items',{
-      url : '/items/{categoryID}',
-      templateUrl : 'src/menuApp/template.categoryItems.html',
-	  controller : 'categoryItemsController as items'
+      url : '/items/{categorySN}',
+      templateUrl : 'src/menuApp/template.view.categoryItems.html',
+	    controller : 'categoryItemsController as items',
+      resolve : {
+        categoryItemsData : ['$stateParams','menuDataService',function($stateParams,menuDataService){
+          return menuDataService.getItemsForCategory($stateParams.categorySN)
+            .then(function(response){
+              return response.data.menu_items;
+            });
+        }]
+      }
     });
 };
 
