@@ -1,0 +1,149 @@
+body{
+  /*background-color:#ebebeb;*/
+  font-family: 'Raleway',sans-serif;
+  letter-spacing:1px;
+}
+h1 {
+  padding:50px;
+  margin:0;
+  text-align:center;
+}
+
+.loader {
+  display: none;
+  margin-left: 5px;
+  font-size: 10px;
+  float: left;
+  border-top: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-right: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-bottom: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-left: 1.1em solid #676767;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#gatherer{
+  width:90%;
+  margin:0 auto;
+  padding:0;
+  display:flex;
+}
+#narrower{
+  width:280px;
+  padding:30px;
+  border:1px solid #ebebeb;
+  background-color:white;
+  height:150px;
+  margin-bottom:30px;
+  border:1px solid #ebebeb;
+  position:relative;
+}
+#narrower input{
+  width:100%;
+  margin-bottom:10px;
+}
+#narrower button{
+  width:100%;
+}
+#narrower .loaderGif img{
+  display:block;
+  height:100px;
+}
+#narrower .loaderGif{
+  position:absolute;
+  top:0;
+  left:0;
+  width:250px;
+  margin:0;
+  padding:0;
+  height:150px;
+  background-color:rgba(255,255,255,0.8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#lister{
+  flex-grow:1;
+  padding:6px 0 0 0;
+  border:1px solid #ebebeb;
+  background-color:white;
+  margin-bottom:30px;
+  border:1px solid #ebebeb;
+}
+#lister h3{
+  padding:20px 30px ;
+  border-bottom:1px solid #ebebeb;
+  margin:0;
+  width:100%;
+}
+#lister ul{
+  width:100%;
+  margin:0;
+  padding:0;
+}
+#lister ul li{
+  display:flex;
+  border-bottom:1px solid #ebebeb;
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+#lister ul li p{
+  padding:10px;
+  margin:0;
+  border-right:1px solid #ebebeb;
+}
+p.f{
+  width:80px;
+  flex-shrink:0;
+}
+#lister ul li  p.s{
+  width:200px;
+  flex-shrink:0;
+}
+#lister ul li  p.fo{
+  width:200px;
+  flex-shrink:0;
+  padding:10px 0;
+}
+p.fo button{
+  margin:0 auto;
+  display:block;
+}
+p.t{
+  flex-grow:1;
+}
+h5{
+  padding:20px 30px;
+  margin:0;
+  color:red;
+  font-size:1.5em;
+}

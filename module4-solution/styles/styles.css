@@ -1,0 +1,144 @@
+*{
+	box-sizing:border-box;
+}
+ul.UNIul{
+	margin:0;
+	padding:0;
+}
+ul.UNIul li{
+	margin:0;
+	list-style-type:none;
+	color:black;
+}
+.UNIlighttext{
+	color:#aeaeae;
+}
+
+body{
+  font-family: 'Raleway',sans-serif;
+  letter-spacing:1px;
+  min-height:100vh;
+  padding-left:250px;
+}
+#header{
+	width:250px;
+	margin:0;
+	padding:0;
+	position:fixed;
+	top:0;
+	left:0;
+	background-color:#1f2056;
+	height:100vh;
+}
+#header a{
+	color:white;
+}
+#logo{
+	width:200px;
+	height:200px;
+	margin:20px auto;
+	background-image:url("../img/foodIcon.jpg");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	border-radius:50%;
+}
+#header ul{
+	width:100%;
+	margin:0;
+	padding:0;
+}
+#header ul li{
+	margin:0;
+	width:100%;
+	padding:13px 0;
+	display:block;
+	text-align:center;
+	font-size:1.2em;
+	letter-spacing:1px;
+	font-family: 'Roboto', sans-serif;
+	color:white;
+	letter-spacing:1px;
+	cursor:pointer;
+	border-bottom:1px solid #783695;
+	border-top:1px solid #783695;
+	margin-top:-1px;
+}
+
+#content{
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+#breadcrumb{
+	width:100%;
+	margin:0 auto;
+	padding:15px 50px;
+	background-color:#F8F8F8;
+	border-bottom:1px solid #ebebeb;
+}
+a{
+	cursor:pointer;
+}
+h1{
+	margin:10px 50px;
+	border-bottom:1px solid #ebebeb;
+	padding:10px 0;
+	font-size:30px;
+	letter-spacing:0px;
+}
+
+.lister{
+	margin:0;
+	padding:0 50px;
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+}
+.cat{
+	border:1px solid #ebebeb;
+	width:170px;
+}
+.cat img{
+	width:100%;
+	margin:0;
+	padding:0;
+	display:block;
+}
+.cat a{
+	line-height:40px;
+	display:block;
+	margin:0;
+	padding:0;
+	text-align:center;
+	background-color:#F8F8F8;
+}
+
+.items{
+	margin:40px 50px;
+	padding:0;
+	padding-left:230px;
+	position:relative;
+}
+.items .cat{
+	position:absolute;
+	top:0;
+	left:0;
+}
+.item{
+	display:flex;
+	width:100%;
+	margin:0;
+	padding:0;
+	margin-bottom:10px;
+	vertical-align:middle;
+	height:50px;
+}
+.item img{
+	width:70px;
+	margin-right:10px;
+}
+.item a{
+	line-height:50px;
+}

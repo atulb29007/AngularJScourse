@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>The Shopping App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+  </head>
+<body ng-app="menuSearch">
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png"/></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!--<ul class="nav navbar-nav">
+        <li><a href="#">Link</a></li>
+      </ul>-->
+      <ul class="nav navbar-nav navbar-right">
+	    <li><a href="index.html"><span>Products</span></a></li>
+		<li><a href="wishlist.html"><span>Wishlist</span></a></li>
+        <li><a href="cart.html"><i class="fa fa-shopping-bag hidden-xs"></i><span class="visible-xs">cart</span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!--<div class="myNav">
+	<div id="myNavhead">
+		<div id="myNavsearch">
+		</div>
+		<div id="myNavclick">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>		
+	</div>
+	<div id="myNavlister">
+		<ul>
+			<li>About Us</li>
+			<li>Products</li>
+			<li>Cart</li>
+			<li>Contact Us</li>
+		</ul>
+	</div>
+</div>-->
+
+<div class="container-fluid">
+	<div class="row" id="productrow">
+		<div class="col-xs-12 col-sm-4 col-md-2" id="categorycol">
+			<div class="categorylister">
+				<h2>Category</h2>
+				<ul class="UNIul">
+					<li><input type="checkbox">Tshirts</li>
+					<li><input type="checkbox">Shirts</li>
+					<li><input type="checkbox">Suits</li>
+					<li><input type="checkbox">Jackets</li>
+					<li><input type="checkbox">Jeans</li>
+				<ul>
+			</div>
+			<div class="categorylister">
+				<h2>Brands</h2>
+				<ul class="UNIul">
+					<li><input type="checkbox">Alvin Kelly</li>
+					<li><input type="checkbox">John Players</li>
+					<li><input type="checkbox">Wrogn</li>
+					<li><input type="checkbox">Envoy</li>
+					<li><input type="checkbox">Suits LTD</li>
+					<li><input type="checkbox">Alvin Kelly</li>
+					<li><input type="checkbox">John Players</li>
+					<li><input type="checkbox">Wrogn</li>
+					<li><input type="checkbox">Envoy</li>
+				<ul>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-8 col-md-10" id="productcol">
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/Tshirts/FrenchConnection.png');">
+					</div>
+					<div class="productdescription">
+						<h3>French Connection</h3>
+						<h4>Printed T-shirt</h4>
+						<h5>MRP : Rs. 559</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/shirts/Jack&jones.png');">
+					</div>
+					<div class="productdescription">
+						<h3>Jack&jones</h3>
+						<h4>Foraml Shirt</h4>
+						<h5>MRP : Rs.1095</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/suits/SuitsLTD_tuxedo.png');">
+					</div>
+					<div class="productdescription">
+						<h3>Suits LTD</h3>
+						<h4>Tuxedo suit</h4>
+						<h5>MRP : Rs.6559</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/suits/Envoy.png');">
+					</div>
+					<div class="productdescription">
+						<h3>Envoy</h3>
+						<h4>Formal Suit</h4>
+						<h5>MRP : Rs.4099</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/shirts/Unitedcolorsof Benetton.png');">
+					</div>
+					<div class="productdescription">
+						<h3><span style="font-size:0.95em;letter-spacing:0;">United Colors of Benetton</span></h3>
+						<h4>Casual Shirt</h4>
+						<h5>MRP : Rs.763</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/shirts/Mast&harbour.png');">
+					</div>
+					<div class="productdescription">
+						<h3>Mast & Harbour</h3>
+						<h4>Printed T-shirt</h4>
+						<h5>MRP : Rs.999</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/Tshirts/Blackberrys.png');">
+					</div>
+					<div class="productdescription">
+						<h3>Blackberrys</h3>
+						<h4>Striped polo collar T-shirt</h4>
+						<h5>MRP : Rs.807</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 productholder">
+				<div class="productcontainer">
+					<div class="productpic" style="background-image:url('img/products/Tshirts/Roadster.png');">
+					</div>
+					<div class="productdescription">
+						<h3>Roadster</h3>
+						<h4>Striped polo collar T-shirt</h4>
+						<h5>MRP : Rs.369</h5>
+						<div class="productaction">
+							<a class="wish">Wishlist</a>
+							<a class="cart">Buy Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
