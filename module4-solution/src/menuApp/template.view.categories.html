@@ -1,12 +1,12 @@
-	<div id="breadcrumb">
-		<a ui-sref="home">Home</a>
-		<span> > </span>
-		<a ui-sref="category">Categories</a>
+<div id="breadcrumb">
+	<a ui-sref="home">Home</a>
+	<span> > </span>
+	<a ui-sref="category">Categories</a>
+</div>
+<h1>Food Categories</h1>
+<div class="lister" ng-repeat="category in category.categories">
+	<div class="cat">
+		<img src="img/menu/{{category.short_name}}/{{category.short_name}}.jpg">
+		<a ui-sref="items({categorySN:category.short_name,categoryN:category.name})">{{category.name}}</a>
 	</div>
-	<h1>Food Categories</h1>
-	<div class="lister" ng-repeat="category in category.categories">
-		<div class="cat">
-			<img src="img/menu/{{category.short_name}}/{{category.short_name}}.jpg">
-			<a ui-sref="items({categorySN:'{{category.short_name}}'})">{{category.name}}</a>
-		</div>
-	</div>
+</div>

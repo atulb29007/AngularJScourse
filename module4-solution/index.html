@@ -10,17 +10,23 @@
 	  <!-- Modules and Routes -->
     <script src="src/menuApp/module.menuApp.js"></script>
     <script src="src/menuApp/module.data.js"></script>
+    <script src="src/menuApp/module.loader.js"></script>
 	  <script src="src/menuApp/routes.menuApp.js"></script>
-    <!-- Controllers and Services -->
+    <!-- Controllers -->
 	  <script src="src/menuApp/controller.homeController.js"></script>
 	  <script src="src/menuApp/controller.categoryController.js"></script>
 	  <script src="src/menuApp/controller.categoryItemsController.js"></script>
+    <!-- Services -->
     <script src="src/menuApp/service.menuDataService.js"></script>
+    <!-- Components -->
+    <script src="src/menuApp/component.loadingSpinnerComponent.js"></script>
   	<!-- StyleSheets -->
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 <body ng-app="menuApp">
+
+  <loading-spinner></loading-spinner>
 
 	<div id="header">
 		<div id="logo"></div>

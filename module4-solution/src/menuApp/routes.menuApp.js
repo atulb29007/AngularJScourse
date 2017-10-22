@@ -35,6 +35,9 @@ function RoutesConfig($stateProvider,$urlRouterProvider){
               return response.data.menu_items;
             });
         }]
+      },
+      params : {
+        categoryN : null
       }
     });
 };

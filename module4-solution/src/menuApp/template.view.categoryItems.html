@@ -1,14 +1,14 @@
-	<div id="breadcrumb"><a ui-sref="home">Home</a> > <a ui-sref="category">Categories > <a ui-sref="items({categorySN:'{{items.categoryID}}'})">Category-{{items.categorySN}}</a></div>
-	<h1>Items of Category-{{items.categorySN}}</h1>
-	<div class="items">
-  	<div class="cat">
-    	<img src="img/menu/{{items.categorySN}}/{{items.categorySN}}.jpg">
-    	<a ui-sref="items({categorySN:'{{items.categorySN}}'})">Category-{{items.categorySN}}</a>
-  	</div>
-  	<div class="shower">
-    	<div class="item" ng-repeat="categoryItem in items.categoryItems">
-      	<img src="img/menu/{{items.categorySN}}/{{items.categorySN}}{{$index+1}}.jpg">
-      	<p>{{categoryItem.name}}</p>
-    	</div>
+<div id="breadcrumb"><a ui-sref="home">Home</a> > <a ui-sref="category">Categories > <a ui-sref="items({categorySN:items.categorySN,categoryN:items.categoryName})">{{items.categoryName}} Category</a></div>
+<h1>Items of {{items.categoryName}} Category</h1>
+<div class="items">
+	<div class="cat">
+  	<img src="img/menu/{{items.categorySN}}/{{items.categorySN}}.jpg">
+  	<a ui-sref="items({categorySN:items.categorySN,categoryN:items.categoryName})">{{items.categoryName}} Category</a>
+	</div>
+	<div class="shower">
+  	<div class="item" ng-repeat="categoryItem in items.categoryItems">
+    	<img src="img/menu/{{items.categorySN}}/{{items.categorySN}}{{$index+1}}.jpg">
+    	<p>{{categoryItem.name}}</p>
   	</div>
 	</div>
+</div>

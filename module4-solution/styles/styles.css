@@ -1,6 +1,25 @@
 *{
 	box-sizing:border-box;
 }
+#loadingSpinner{
+	width:100vw;
+	margin:0;
+	padding:0;
+	position:fixed;
+	background-color:rgba(255,255,255,0.8);
+	top:0;
+	left:0;
+	height:100vh;
+	z-index:100;
+}
+#loadingSpinner img{
+	width:100px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
 ul.UNIul{
 	margin:0;
 	padding:0;
