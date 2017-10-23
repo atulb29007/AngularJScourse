@@ -8,7 +8,14 @@
 	<div class="shower">
   	<div class="item" ng-repeat="categoryItem in items.categoryItems">
     	<img src="img/menu/{{items.categorySN}}/{{items.categorySN}}{{$index+1}}.jpg">
-    	<p>{{categoryItem.name}}</p>
+			<div>
+    		<h2>{{categoryItem.name}}</h2>
+				<p>{{categoryItem.description}}</p>
+				<div class="order">
+					<a><span>Order Small</span>&#36{{categoryItem.price_small}}</a>
+					<a><span>Order Large</span>&#36{{categoryItem.price_large}}</a>
+				</div>
+			</div>
   	</div>
 	</div>
 </div>

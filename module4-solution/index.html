@@ -23,6 +23,7 @@
   	<!-- StyleSheets -->
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 <body ng-app="menuApp">
 
@@ -33,7 +34,13 @@
 		<ul>
 			<li><a ui-sref="home">Home</a></li>
 			<li><a ui-sref="category">Categories</a></li>
+      <li><a ui-sref="home">About Us</a></li>
       <li><a ui-sref="home">Contact Us</a></li>
+      <li>
+        <span ui-sref="home"><i class="fa fa-facebook"></i></span>
+        <span ui-sref="home"><i class="fa fa-twitter"></i></span>
+        <span ui-sref="home"><i class="fa fa-instagram"></i></span>
+      </li>
 		</ul>
 	</div>
 
