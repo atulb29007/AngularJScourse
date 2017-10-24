@@ -16,8 +16,10 @@
 	  <script src="src/menuApp/controller.homeController.js"></script>
 	  <script src="src/menuApp/controller.categoryController.js"></script>
 	  <script src="src/menuApp/controller.categoryItemsController.js"></script>
+    <script src="src/menuApp/controller.ordersController.js"></script>
     <!-- Services -->
     <script src="src/menuApp/service.menuDataService.js"></script>
+    <script src="src/menuApp/service.orderingService.js"></script>
     <!-- Components -->
     <script src="src/menuApp/component.loadingSpinnerComponent.js"></script>
   	<!-- StyleSheets -->
@@ -25,28 +27,28 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-<body ng-app="menuApp">
 
-  <loading-spinner></loading-spinner>
+  <body ng-app="menuApp">
+    <loading-spinner></loading-spinner>
 
-	<div id="header">
-		<div id="logo"></div>
-		<ul>
-			<li><a ui-sref="home">Home</a></li>
-			<li><a ui-sref="category">Categories</a></li>
-      <li><a ui-sref="home">About Us</a></li>
-      <li><a ui-sref="home">Contact Us</a></li>
-      <li>
-        <span ui-sref="home"><i class="fa fa-facebook"></i></span>
-        <span ui-sref="home"><i class="fa fa-twitter"></i></span>
-        <span ui-sref="home"><i class="fa fa-instagram"></i></span>
-      </li>
-		</ul>
-	</div>
+	  <div id="header">
+		  <div id="logo"></div>
+		  <ul>
+		    <li><a ui-sref="home">Home</a></li>
+		    <li><a ui-sref="category">Categories</a></li>
+        <li><a ui-sref="orders">Your Orders</a></li>
+        <li><a ui-sref="home">About Us</a></li>
+        <li><a ui-sref="home">Contact Us</a></li>
+        <li>
+          <span ui-sref="home"><i class="fa fa-facebook"></i></span>
+          <span ui-sref="home"><i class="fa fa-twitter"></i></span>
+          <span ui-sref="home"><i class="fa fa-instagram"></i></span>
+        </li>
+		  </ul>
+	  </div>
 
-	<div id="content">
-		<ui-view></ui-view>
-	</div>
-
-</body>
+	  <div id="content">
+		  <ui-view></ui-view>
+	  </div>
+  </body>
 </html>

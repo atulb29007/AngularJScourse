@@ -12,8 +12,8 @@
     		<h2>{{categoryItem.name}}</h2>
 				<p>{{categoryItem.description}}</p>
 				<div class="order">
-					<a><span>Order Small</span>&#36{{categoryItem.price_small}}</a>
-					<a><span>Order Large</span>&#36{{categoryItem.price_large}}</a>
+					<a ng-click="items.orderThisItem(categoryItem,items.categorySN,'small')"><span>Order Small</span>&#36{{categoryItem.price_small}}</a>
+					<a ng-click="items.orderThisItem(categoryItem,items.categorySN,'large')"><span>Order Large</span>&#36{{categoryItem.price_large}}</a>
 				</div>
 			</div>
   	</div>

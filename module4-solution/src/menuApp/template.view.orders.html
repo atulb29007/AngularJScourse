@@ -1,0 +1,40 @@
+<div id="breadcrumb"><a ui-sref="home">Home</a> > <a ui-sref="orders">Order Summary</a></div>
+<h1>Your Orders</h1>
+
+<div id="cartrow">
+	<div id="cartlister">
+		<div ng-repeat="order in orders.ordersList" class="cartproduct">
+			<div class="cartpic">
+				<img src="img/menu/{{order.categorySN}}/{{order.short_name}}.jpg"/>
+			</div>
+			<div class="cartinfo">
+				<h2>{{order.name}}</h2>
+				<div>
+					<p>Qty :
+						<span class="inc" ng-click="orders.decQty($index)">-</span>
+						<span class="dig">{{order.quantity}}</span>
+						<span class="inc" ng-click="orders.incQty($index)">+</span>
+					</p>
+				</div>
+				<div class="removerHolder">
+					<h4>Total Price (&#36) : {{order.orderPrice}}</h4>
+					<a class="remover" ng-click="orders.removeOrder($index)">Remove</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cartsummer">
+		<div id="cartbill">
+		<h2>Price Details</h2>
+		<ul class="UNIul">
+			<li>Bag Total<span>&#36{{orders.bagTotal}}</span></li>
+			<li>Bag Discount (5%)<span>&#36 {{orders.bagDiscount}}</span></li>
+			<li>Estimated Tax (20%)<span>&#36 {{orders.bagTax}}</span></li>
+			<li>Coupan Discount<span>&#36 0</span></li>
+			<li>Delievery Charges<span>&#36 {{orders.delieveryCharges}}</span></li>
+			<li>Order Total<span>&#36 {{orders.orderTotal}}</span></li>
+		</ul>
+		<a class="cart">Checkout</a>
+		</div>
+	</div>
+</div>

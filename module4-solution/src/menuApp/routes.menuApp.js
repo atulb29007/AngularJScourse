@@ -39,6 +39,16 @@ function RoutesConfig($stateProvider,$urlRouterProvider){
       params : {
         categoryN : null
       }
+    })
+    .state('orders',{
+      url : '/orders',
+      templateUrl : 'src/menuApp/template.view.orders.html',
+	    controller : 'ordersController as orders',
+      resolve : {
+        ordersData : ['orderingService',function(orderingService){
+          return orderingService.orders;
+        }]
+      }
     });
 };
 

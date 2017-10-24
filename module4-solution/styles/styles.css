@@ -70,7 +70,7 @@ body{
 #header ul li{
 	margin:0;
 	width:100%;
-	padding:13px 0;
+	padding:0;
 	display:block;
 	text-align:center;
 	font-size:1.2em;
@@ -79,9 +79,16 @@ body{
 	color:white;
 	letter-spacing:1px;
 	cursor:pointer;
-	/*border-bottom:1px solid #783695;*/
-	/*border-top:1px solid #783695;*/
 	margin-top:-1px;
+}
+#header ul li a{
+	display:block;
+	padding:13px 0;
+}
+#header ul li a:hover{
+	text-decoration:none;
+	display:block;
+	background-color:#2f3769;
 }
 #header ul li:last-child{
 	border:none;
@@ -217,4 +224,184 @@ h1{
 	border-top-left-radius:5px;
 	border-bottom-left-radius:5px;
 	margin-right:5px;
+}
+
+/**********************
+Order Page Styles
+**********************/
+#cartrow{
+	margin:0 auto;
+	position:relative;
+	max-width:800px;
+	margin:30px auto 30px 40px;
+	padding-right:280px;
+}
+#cartrow>div{
+	margin:0;
+	padding:0 10px;
+}
+#cartlister{
+	width:100%;
+	margin:0;
+	padding:0 10px;
+}
+.cartproduct{
+	width:100%;
+	margin:0;
+	padding:0;
+	border:1px solid #ebebeb;
+	position:relative;
+	padding-left:190px;
+	margin-bottom:20px;
+	height:110px;
+	padding-bottom:50px;
+	padding-right:5px;
+}
+.cartpic{
+	width:180px;
+	height:110px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.cartpic img{
+	display:block;
+	width:100%;
+}
+.cartinfo{
+	height:80px;
+	border-bottom:1px solid #ebebeb;
+}
+.cartinfo h2{
+	margin:0;
+	padding:8px 0 0 0;
+	font-size:1em;
+	line-height:1.3em;
+	//text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+}
+.cartinfo p{
+	margin:0;
+	padding:5px 0;
+	font-size:0.9em;
+	font-family: 'Roboto', sans-serif;
+}
+.cartinfo p span.inc{
+	height:100%;
+	padding:5px 10px;
+	display:inline-block;
+	text-align:center;
+	font-size:0.9em;
+	color:white;
+	cursor:pointer;
+	background-color:#2D5072;
+	//border-radius:3px;
+	margin:0;
+	margin-top:5px;
+}
+.cartinfo p span.dig{
+	height:100%;
+	padding:6px;
+	margin:0;
+	margin-top:5px;
+	font-size:0.85em;
+	border-top:1px solid #ebebeb;
+	border-bottom:1px solid #ebebeb;
+}
+.cartinfo .removerHolder{
+	position:absolute;
+	bottom:0;
+	left:190px;
+	height:30px;
+	margin:0;
+	padding:0;
+}
+.cartinfo h4{
+	margin:0;
+	padding:0;
+	font-size:0.85em;
+	letter-spacing:1px;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+	display:inline-block;
+	line-height:30px;
+}
+.cartinfo a{
+	height:35px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	width:50%;
+	display:inline-block;
+	line-height:30px;
+	text-align:center;
+	font-size:0.85em;
+	/*color:white;*/
+	cursor:pointer;
+	width:105px;
+	text-transform:uppercase;
+}
+#cartsummer{
+	width:100%;
+	margin:0;
+	padding:0 10px;
+	//background-color:green;
+}
+#cartbill{
+	width:100%;
+	margin:0;
+	padding:10px 15px;
+	border:1px solid #ebebeb;
+	width:280px;
+	position:absolute;
+	top:0;
+	right:0;
+}
+#cartbill h2{
+	margin:0;
+	margin-bottom:8px;
+	padding:8px 0;
+	font-size:1.1em;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-family: 'Roboto', sans-serif;
+	border-bottom:1px solid #ebebeb;
+}
+#cartbill ul li{
+	padding:3px 0;
+	position:relative;
+	font-size:0.9em;
+}
+#cartbill ul li:last-child{
+	border-top:1px solid #ebebeb;
+	margin-top:7px;
+	padding:10px 0;
+	font-size:0.9em;
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+#cartbill ul li span{
+	padding:3px 0;
+	position:absolute;
+	top:50%;
+	transform:translate(0,-50%);
+	right:0;
+}
+#cartbill a{
+	margin:5px 0 0 0;
+	padding:10px 0;
+	display:block;
+	text-align:center;
+	font-size:0.85em;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-weight:bold;
+	font-family: 'Roboto', sans-serif;
+	color:white;
+	cursor:pointer;
+	background-color:#2D5072;
+}
+#cartbill a:hover{
+	text-decoration:none;
 }
