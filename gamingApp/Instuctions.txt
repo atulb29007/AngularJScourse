@@ -1,0 +1,5 @@
+(1.) Either set up a server or open the web app inmozilla firefox.
+
+(2.) The homepage is blank and shown only for the sake of showing functional routing.
+
+(3.) "clear all" button shown in the left side menu clears the sorting for that parameter.

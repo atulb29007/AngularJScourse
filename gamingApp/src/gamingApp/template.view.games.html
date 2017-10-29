@@ -1,0 +1,56 @@
+<div class="gamesHeader">
+	<div class="gamesHeaderCon">
+		<h1>All Games</h1>
+		<div class="gameSorter">
+			<input type="text" ng-model="games.searchTerm" ng-change="games.searchGame(false)" placeholder="Seach all games"></input>
+			<ul class="searchResults" ng-if="games.searchShow">
+				<li ng-repeat="game in games.sortedGames" ng-click="games.autoComplete(game.title,game.platform)">{{game.title}} ({{game.platform}})</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid" id="allGamesCon">
+<div class="row">
+
+	<div class="col-xs-12 col-sm-6 col-md-3">
+		<div id="gameOptions">
+			<h3>Sort By
+				<a ng-click="games.sortClear([1])">Clear All</a>
+			</h3>
+			<p><input ng-click="games.sortByScore(true)" type="radio" name="score">Score (High to Low)</p>
+			<p><input ng-click="games.sortByScore(flase)" type="radio" name="score">Score (Low to High)</p>
+		</div>
+		<div id="gameOptions">
+			<h3>Platforms
+				<a ng-click="games.sortClear([2])">Clear All</a>
+			</h3>
+			<p ng-repeat="platform in games.platforms"><input ng-click="games.sortByPlatform($index)" type="radio" name="platform">{{platform}}</p>
+		</div>
+		<div id="gameOptions">
+			<h3>Genre
+				<a ng-click="games.sortClear([3])">Clear All</a>
+			</h3>
+			<p ng-repeat="genre in games.genres"><input ng-click="games.sortByGenre($index)" type="radio" name="genre">{{genre}}</p>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-6 col-md-9">
+		<div class="row" id="allGamesRow">
+			<div class="col-xs-12 col-sm-12 col-md-6 lister" ng-repeat="game in games.sortedGames">
+				<div class="game">
+					<img src="img/genres/{{game.pic}}.png">
+					<div class="gameDetails">
+						<a ui-sref="items({categorySN:category.short_name,categoryN:category.name})">{{game.title}}</a>
+						<p>Platform : <span>{{game.platform}}</span></p>
+						<p>Genre : <span>{{game.genre}}</span></p>
+						<p>Score : <span>{{game.score}}</span></p>
+						<p><span class="editors" ng-if="game.editors_choice=='Y'"><i class="fa fa-check"></i>Editor's Choice</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>

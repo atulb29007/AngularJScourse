@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>The Gaming App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+ 	  <!-- External Resources -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+	  <!-- Modules and Routes -->
+    <script src="src/gamingApp/module.gamingApp.js"></script>
+    <script src="src/gamingApp/module.data.js"></script>
+	  <script src="src/gamingApp/routes.gamingApp.js"></script>
+    <!-- Controllers -->
+	  <script src="src/gamingApp/controller.homeController.js"></script>
+	  <script src="src/gamingApp/controller.gamesController.js"></script>
+    <!-- Services -->
+    <script src="src/gamingApp/service.gamingDataService.js"></script>
+  	<!-- StyleSheets -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+  <body ng-app="gamingApp">
+    <!-- <loading-spinner></loading-spinner> -->
+
+	  <div id="header">
+		  <div id="logo" ui-sref="home"><img src='img/gameIcon.png'/><p>The Gaming<br/>App</p></div>
+      <!-- <div id="searchBox"><input type="text" name="game" placholder="Search All Games"><button><i class="fa fa-right-arrow"></i></button></div> -->
+	  </div>
+
+	  <div id="content">
+		  <ui-view></ui-view>
+	  </div>
+  </body>
+</html>
