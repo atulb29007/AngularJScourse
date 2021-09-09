@@ -1,3 +1,3 @@
 # angularJS1
 
-A compilation of small projects using AngularJS
+A compilation of small web projects using AngularJS
